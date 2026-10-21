@@ -1,8 +1,6 @@
 from database import Base, engine, session
 from models import Usuario, Livro
 
-Base.metadata.create_all(engine)
-
 maria = Usuario(nome="Maria")
 session.add(maria)
 session.commit()
