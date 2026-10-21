@@ -10,6 +10,7 @@ class Usuario(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     nome: Mapped[str] = mapped_column(String, nullable=False)
     email: Mapped[str] = mapped_column(String(120), unique=True)
+    senha: Mapped[str] = mapped_column(String(120), unique=True)
     livros: Mapped[List['Livro']] = relationship("Livro", back_populates="usuario") # Referencia ao model de livros
 
 

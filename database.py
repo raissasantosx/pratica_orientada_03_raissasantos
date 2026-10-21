@@ -4,7 +4,7 @@ from sqlalchemy.orm import DeclarativeBase, sessionmaker
 class Base(DeclarativeBase):
     pass
 
-engine = create_engine("sqlite:///biblioteca.db", echo=False)
+# engine = create_engine("sqlite:///biblioteca.db", echo=False)
 
 SessionLocal = sessionmaker(bind=engine)
 session = SessionLocal()
